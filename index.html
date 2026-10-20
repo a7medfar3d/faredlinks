@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FARED COSMETICS | روابطنا</title>
+<style>
+:root {
+  --green: #28653b;
+  --dark: #153d27;
+  --gold: #f4c84f;
+  --cream: #fff9e9;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  color: var(--cream);
+  background: linear-gradient(160deg, var(--green), var(--dark));
+  min-height: 100vh;
+  padding: 28px 16px;
+}
+main { max-width: 480px; margin: auto; text-align: center; }
+.logo {
+  width: 190px;
+  height: 190px;
+  object-fit: contain;
+  border-radius: 22px;
+  margin: 5px auto 12px;
+}
+h1 { color: var(--gold); margin: 8px 0; font-size: 28px; }
+.subtitle { margin: 0 0 25px; color: #fff3cd; }
+.links { display: grid; gap: 13px; }
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 14px;
+  border: 1px solid var(--gold);
+  border-radius: 14px;
+  background: var(--cream);
+  color: var(--dark);
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform .15s;
+}
+.link:hover { transform: translateY(-2px); }
+.qr {
+  margin: 27px auto 0;
+  padding: 20px;
+  background: rgba(0,0,0,.15);
+  border: 1px solid rgba(244,200,79,.6);
+  border-radius: 18px;
+}
+.qr h2 { color: var(--gold); font-size: 19px; }
+#qrcode {
+  display: inline-flex;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  min-width: 20px;
+  min-height: 20px;
+}
+#qrcode img { display: block; }
+.note { font-size: 12px; line-height: 1.8; color: #eee4ca; }
+footer { margin-top: 25px; font-size: 12px; color: #e9d89e; }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="logo.png.png" alt="FARED COSMETICS">
+  <h1>FARED COSMETICS</h1>
+  <p class="subtitle">جمالك يبدأ من هنا 💚</p>
+
+  <section class="links">
+    <!-- استبدل الروابط التجريبية بروابط حساباتك لاحقًا -->
+    <a class="link" href="https://wa.me/" target="_blank" rel="noopener">💬 واتساب</a>
+    <a class="link" href="https://www.facebook.com/" target="_blank" rel="noopener">📘 فيسبوك</a>
+    <a class="link" href="https://www.instagram.com/" target="_blank" rel="noopener">📸 إنستجرام</a>
+    <a class="link" href="https://www.tiktok.com/" target="_blank" rel="noopener">🎵 تيك توك</a>
+    <a class="link" href="https://maps.google.com/" target="_blank" rel="noopener">📍 موقع المحل</a>
+  </section>
+
+  <section class="qr">
+    <h2>خلي روابطنا معاك 📱</h2>
+    <div id="qrcode"></div>
+    <p class="note">امسح الكود للوصول إلى صفحة حساباتنا.</p>
+  </section>
+
+  <footer>FARED COSMETICS · جمالك يستحق الأفضل</footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+if (window.QRCode && location.protocol.startsWith("http")) {
+  new QRCode(document.getElementById("qrcode"), {
+    text: location.href,
+    width: 180,
+    height: 180,
+    colorDark: "#153d27",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+}
+</script>
+</body>
+</html>
